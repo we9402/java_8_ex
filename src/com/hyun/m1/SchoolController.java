@@ -15,6 +15,9 @@ public class SchoolController {
 
 	public void start() {
 		Scanner sc = new Scanner(System.in);
+		StudentService ss = new StudentService();
+		StudentView sv = new StudentView();
+		Student [] students =null;
 		boolean c = true; 
 
 		while(c)
@@ -29,16 +32,16 @@ public class SchoolController {
 			switch(i) {
 			
 			case 1 :
-				System.out.println("학생추가");
+				students = ss.addStudent();
 				break;
 			case 2 :
-				System.out.println("성적입력");
+				
 				break;
 			case 3 :
-				System.out.println("성적조회");
+				
 				break;
 			case 4 :
-				System.out.println("전체조회");
+				sv.view(students);
 				break;
 			case 5 :
 				System.out.println("프로그램 종료");
