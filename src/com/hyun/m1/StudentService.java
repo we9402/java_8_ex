@@ -25,5 +25,24 @@ public class StudentService {
 		}
 		return students;
 	}
-
+	
+	//메서드 명 addPoint
+	//내용 : 각 학생의 점수 입력 국영수총평
+	
+	public Student [] addPoint(Student [] students) {
+		Scanner sc = new Scanner(System.in);
+		
+		for(int i=0; i<students.length; i++) {
+			System.out.println(i+1+"번째 학생의 국어 점수 입력");
+			students[i].kor = sc.nextInt();
+			System.out.println(i+1+"번째 학생의 영어 점수 입력");
+			students[i].eng = sc.nextInt();
+			System.out.println(i+1+"번째 학생의 수학 점수 입력");
+			students[i].math = sc.nextInt();
+			students[i].total = students[i].kor+students[i].eng+students[i].math;
+			students[i].avg = students[i].total/3.0;
+			
+		}
+		return students;	
+	}
 }

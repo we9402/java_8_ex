@@ -35,7 +35,7 @@ public class SchoolController {
 				students = ss.addStudent();
 				break;
 			case 2 :
-				
+				ss.addPoint(students);
 				break;
 			case 3 :
 				
