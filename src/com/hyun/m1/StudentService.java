@@ -45,4 +45,21 @@ public class StudentService {
 		}
 		return students;	
 	}
+	
+	public Student sera(Student [] students) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("번호입력");
+		int i;
+		int j = sc.nextInt();
+		
+		for(i=0; i<students.length; i++) {
+			if(students[i].num==j) {
+				break;
+			}
+		}
+		return students[i];
+	}
+	
+	
+	
 }

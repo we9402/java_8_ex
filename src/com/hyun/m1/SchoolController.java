@@ -38,7 +38,8 @@ public class SchoolController {
 				ss.addPoint(students);
 				break;
 			case 3 :
-				
+				Student studentss = ss.sera(students);
+				sv.view2(studentss);
 				break;
 			case 4 :
 				sv.view(students);

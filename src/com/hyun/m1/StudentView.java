@@ -17,5 +17,12 @@ public class StudentView {
 		System.out.println("평균 : "+students[i].avg);
 		}
 	}
+	public void view2(Student studentss) {
+		System.out.println("국어 : "+studentss.kor);
+		System.out.println("영어 : "+studentss.eng);
+		System.out.println("수학 : "+studentss.math);
+		System.out.println("총점 : "+studentss.total);
+		System.out.println("평균 : "+studentss.avg);
+	}
 
 }
