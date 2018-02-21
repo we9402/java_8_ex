@@ -1,35 +1,39 @@
 package com.hyun.m2;
 
+import java.util.Scanner;
+
 public class Food_Main {
-	public static void main(String[] args) {
-		Food_Pasta pasta = new Food_Pasta();
-		pasta.name = "크림파스타";
-		pasta.price = 15000;
+	public static void main(String [] agrs) {
+		Scanner sc = new Scanner(System.in);
+		/*Shef_Source s = new Shef_Source();
+		Food_Source source = s.makeSource(2);*/
 		
-		System.out.println(pasta.source);
-		pasta.source = new Food_Source();
-		
-		System.out.println(pasta.source.oilName);
-		pasta.source.oilName = "올리브";
-		pasta.source.spiceName = "허브";
-		
-		Food_Pasta pasta2 = new Food_Pasta();
-		
-		System.out.println(pasta2.source.oilName);
+		Menu menu = new Menu();
+		menu.order();
 		
 		
-		//소스 : 오일, 향식료
-		
-		for(int i=0; i<2; i++) {
-			Food_Steak steak = new Food_Steak();
-			steak.name = "티본스테이크";
-			steak.price = 40000;
-		}
-		
-		
-		
-		
-		
+		/*int i = menu.order();
+		if(i<=3) {
+			Shef_Steak ms = new Shef_Steak();	//제작
+			Food_Steak steak = ms.makeSteak(i); //주문
+			if(steak != null) { //null값이 아닐경우 출력
+				System.out.println(steak.name);
+				System.out.println(steak.price);
+				System.out.println(steak.source.oilName);
+				System.out.println(steak.source.spiceName);
+			}
+		}else if(i>3) {
+			Shef_Pasta mp = new Shef_Pasta();  	//제작
+			Food_Pasta pasta = mp.makePasta(i); //주문
+			if(pasta != null) { //null값이 아닐경우 출력
+				System.out.println(pasta.name);
+				System.out.println(pasta.price);
+				System.out.println(pasta.source.oilName);
+				System.out.println(pasta.source.spiceName);
+			}
+		}*/
+
+
 
 		/*pasta.name = steak.name;	//데이터 타입이 같음
 		pasta.price = steak.price;	//데이터 타입이 같음
