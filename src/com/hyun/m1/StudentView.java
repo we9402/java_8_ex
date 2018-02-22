@@ -18,6 +18,8 @@ public class StudentView {
 		}
 	}
 	public void view2(Student studentss) {
+		System.out.println("이름 : "+studentss.name);
+		System.out.println("번호 : "+studentss.num);
 		System.out.println("국어 : "+studentss.kor);
 		System.out.println("영어 : "+studentss.eng);
 		System.out.println("수학 : "+studentss.math);
