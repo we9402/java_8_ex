@@ -10,8 +10,14 @@ public class StudentService {
 	//이름입력
 	//번호입력
 	
+	//생성자 공식
+	//접근지정자 클래스명(){}
+	Scanner sc;
+	public StudentService() {
+		sc = new Scanner(System.in);
+	}
+	
 	public Student [] addStudent() {
-		Scanner sc = new Scanner(System.in);
 		System.out.println("학생의 인원수 입력");
 		int j = sc.nextInt();
 		Student [] students = new Student[j];
@@ -30,7 +36,6 @@ public class StudentService {
 	//내용 : 각 학생의 점수 입력 국영수총평
 	
 	public Student [] addPoint(Student [] students) {
-		Scanner sc = new Scanner(System.in);
 		
 		for(int i=0; i<students.length; i++) {
 			System.out.println(i+1+"번째 학생의 국어 점수 입력");
@@ -45,9 +50,8 @@ public class StudentService {
 		}
 		return students;	
 	}
-	
+	 
 	public Student sera(Student [] students) {
-		Scanner sc = new Scanner(System.in);
 		System.out.println("번호입력");
 		/*int i;
 		int j = sc.nextInt();

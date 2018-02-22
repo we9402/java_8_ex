@@ -39,7 +39,12 @@ public class SchoolController {
 				break;
 			case 3 :
 				Student studentss = ss.sera(students);
-				sv.view2(studentss);
+				if(studentss !=null) {
+					sv.view(studentss);
+				}else {
+					sv.view("해당 번호의 학생이 없습니다.");
+				}
+				
 				break;
 			case 4 :
 				sv.view(students);
