@@ -38,11 +38,15 @@ public class SchoolController {
 				ss.addPoint(students);
 				break;
 			case 3 :
-				Student studentss = ss.sera(students);
-				if(studentss !=null) {
-					sv.view(studentss);
+				if(students !=null) {
+					Student studentss = ss.sera(students);
+					if(studentss !=null) {
+						sv.view(studentss);
+					}else {
+						sv.view("해당 번호의 학생이 없습니다.");
+					}
 				}else {
-					sv.view("해당 번호의 학생이 없습니다.");
+					sv.view("학생정보를 입력하세요.");
 				}
 				
 				break;
